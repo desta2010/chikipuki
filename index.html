@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>ВСЕЛЕННАЯ СЕРГЕЯ ✦ ДЕСТА ✦ ДЕВУШКИ ✦ МАССАЖ</title>
+    <!-- Шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@100;300;400;600;700;900&family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ============================================================ */
+        /* ========== СТИЛИ ИЗ ПЕРВОГО ФАЙЛА (МАССАЖ) ========== */
+        /* ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== 100+ АНИМАЦИЙ ===== */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,62,62,0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255,62,62,0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,62,62,0); }
+        }
+
+        @keyframes rotate3D {
+            0% { transform: perspective(1000px) rotateY(0deg); }
+            100% { transform: perspective(1000px) rotateY(360deg); }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes rotateIn {
+            from { transform: rotate(-180deg) scale(0.3); opacity: 0; }
+            to { transform: rotate(0) scale(1); opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+            20%, 40%, 60%, 80% { transform: translateX(10px); }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-5px, 5px); }
+            40% { transform: translate(-5px, -5px); }
+            60% { transform: translate(5px, 5px); }
+            80% { transform: translate(5px, -5px); }
+            100% { transform: translate(0); }
+        }
+
+        @keyframes neon {
+            0% { text-shadow: 0 0 10px #ff3e3e, 0 0 20px #ff3e3e, 0 0 30px #ff3e3e; }
+            50% { text-shadow: 0 0 20px #ff8c42, 0 0 40px #ff8c42, 0 0 60px #ff8c42; }
+            100% { text-shadow: 0 0 10px #ff3e3e, 0 0 20px #ff3e3e, 0 0 30px #ff3e3e; }
+        }
+
+        /* ===== 50+ ГРАДИЕНТОВ ===== */
+        .gradient-text {
+            background: linear-gradient(135deg, #ff3e3e, #ff8c42, #ffd93d, #ff6b9d, #a463f5, #3ecf8e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(45deg, #ff3e3e, #ff8c42, #ffd93d);
+            background-size: 200% 200%;
+            animation: gradientBG 5s ease infinite;
+        }
+
+        .gradient-border {
+            border: 3px solid transparent;
+            border-image: linear-gradient(45deg, #ff3e3e, #ff8c42);
+            border-image-slice: 1;
+        }
+
+        /* ===== 3D ЭФФЕКТЫ ===== */
+        .card-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .card-3d:hover {
+            transform: rotateX(10deg) rotateY(10deg);
+            transition: 0.5s;
+        }
+
+        /* ===== ЧАСТИЦЫ ===== */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #1a1a1a, #0a0a0a);
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 62, 62, 0.3);
+            animation: float 15s infinite;
+        }
+
+        /* ===== КОНТЕЙНЕРЫ ===== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        /* ===== ХЕДЕР ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 62, 62, 0.3);
+            transition: 0.4s;
+        }
+
+        header.scrolled {
+            padding: 15px 60px;
+            background: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 5px 30px rgba(255, 62, 62, 0.3);
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #ff3e3e;
+            text-shadow: 0 0 20px rgba(255, 62, 62, 0.7);
+            animation: neon 3s infinite;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 50px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding: 5px 0;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff8c42;
+            transform: scale(1.1);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff3e3e, #ff8c42, #ffd93d);
+            transition: 0.4s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        /* ============================================================ */
+        /* ========== СТИЛИ ИЗ ВТОРОГО ФАЙЛА (ПОЗДРАВЛЕНИЯ) ========== */
+        /* ============================================================ */
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(145deg, #1a0f0c 0%, #2d1a1a 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M20,50 Q35,30 50,50 T80,50" stroke="%23ff6b6b" fill="none" stroke-width="2"/><path d="M20,60 Q35,40 50,60 T80,60" stroke="%23ff8e8e" fill="none" stroke-width="2"/></svg>') repeat;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1300px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Шапка с фото */
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .photo-frame {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            padding: 8px;
+            background: linear-gradient(135deg, #ffb347, #ff6b6b);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 3px rgba(255,215,0,0.3);
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 20px rgba(255,107,107,0.5); }
+            to { box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 40px rgba(255,193,7,0.8); }
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff6e0, #ffdab9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(255,107,107,0.3);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        /* Сетка с поздравлениями */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Карточка девушки */
+        .girl-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 182, 193, 0.3);
+            border-radius: 40px;
+            padding: 30px 25px;
+            box-shadow: 0 25px 50px -8px rgba(0,0,0,0.4);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .girl-card:hover {
+            transform: translateY(-15px);
+            border-color: #ffb6c1;
+            box-shadow: 0 35px 60px -8px rgba(255,105,180,0.3);
+        }
+
+        .girl-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #ff9a9e);
+        }
+
+        /* Индивидуальные градиенты для каждой */
+        .card-sasha::before {
+            background: linear-gradient(90deg, #ff758c, #ff7eb3, #ff758c);
+        }
+        .card-lida::before {
+            background: linear-gradient(90deg, #a18cd1, #fbc2eb, #a18cd1);
+        }
+        .card-anechka::before {
+            background: linear-gradient(90deg, #ffd700, #ffb347, #ffd700);
+        }
+
+        .girl-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .name-sasha { color: #ff7eb3; text-shadow: 0 0 10px #ff3b6f; }
+        .name-lida { color: #c7a2ff; text-shadow: 0 0 10px #9f7aea; }
+        .name-anechka { color: #ffdb7e; text-shadow: 0 0 10px #ffb347; }
+
+        .girl-emoji {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+        }
+
+        .message-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+            padding: 25px 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(255,255,255,0.1);
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #fff0f0;
+            text-align: center;
+            transition: all 0.3s;
+            font-weight: 300;
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        .message-content {
+            max-width: 100%;
+            word-break: break-word;
+        }
+
+        .click-hint {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .heart-icon {
+            color: #ff6b6b;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Кнопка "ещё" */
+        .more-btn {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .more-btn:hover {
+            background: rgba(255,107,107,0.3);
+            border-color: #ff7eb3;
+        }
+
+        /* Подвал */
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.9rem;
+        }
+
+        /* Анимация появления */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Стили для сообщений (немного пошлые, но романтичные) */
+        .romantic-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .spicy-text {
+            color: #ffb6c1;
+            font-weight: 500;
+        }
+
+        /* ============================================================ */
+        /* ========== СТИЛИ ИЗ ТРЕТЬЕГО ФАЙЛА (ДЕСТА) ========== */
+        /* ============================================================ */
+
+        /* Герой с фото */
+        .hero {
+            min-height: 110vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            animation: slideInLeft 1s ease;
+        }
+
+        .hero-title {
+            font-size: 82px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-subtitle {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #ff3e3e;
+            text-shadow: 0 0 15px rgba(255, 62, 62, 0.5);
+            letter-spacing: 3px;
+            animation: pulse 3s infinite;
+        }
+
+        .hero-quote {
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 35px;
+            font-style: italic;
+            color: #ff8c42;
+            position: relative;
+            padding-left: 35px;
+            border-left: 6px solid #ff3e3e;
+            line-height: 1.4;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            margin-bottom: 45px;
+            color: #ccc;
+            line-height: 1.9;
+        }
+
+        .desta-photo {
+            width: 550px;
+            height: 550px;
+            border-radius: 30px 30px 30px 30px;
+            object-fit: cover;
+            border: 6px solid rgba(255, 62, 62, 0.6);
+            box-shadow: 0 30px 100px rgba(255, 62, 62, 0.5);
+            transition: 0.6s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .desta-photo:hover {
+            transform: scale(1.08) rotate(2deg);
+            border-color: #ff8c42;
+            box-shadow: 0 40px 140px rgba(255, 140, 66, 0.7);
+        }
+
+        .photo-frame {
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            border: 3px solid rgba(255, 62, 62, 0.4);
+            border-radius: 30px 30px 30px 30px;
+            top: -25px;
+            left: -25px;
+            z-index: 1;
+            animation: rotate3D 20s linear infinite;
+        }
+
+        .photo-frame2 {
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            border: 3px solid rgba(255, 140, 66, 0.4);
+            border-radius: 30px 30px 30px 30px;
+            bottom: -25px;
+            right: -25px;
+            z-index: 1;
+            animation: rotate3D 20s linear infinite reverse;
+        }
+
+        .hero-badge {
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #ff3e3e, #ff8c42, #ffd93d);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            font-size: 48px;
+            color: white;
+            box-shadow: 0 0 50px rgba(255, 62, 62, 0.7);
+            animation: rotate3D 15s linear infinite;
+            z-index: 10;
+            border: 3px solid white;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(45deg, #ff3e3e, #ff8c42);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            transition: 0.5s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 15px 40px rgba(255, 62, 62, 0.5);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.7s;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 25px 60px rgba(255, 62, 62, 0.7);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 3px solid #ff3e3e;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: #ff3e3e;
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        /* Галерея */
+        .gallery-section {
+            padding: 80px 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 25px;
+            border: 4px solid rgba(255, 62, 62, 0.5);
+            transition: 0.6s;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05) rotate(3deg);
+            border-color: #ff8c42;
+            box-shadow: 0 30px 60px rgba(255, 62, 62, 0.5);
+        }
+
+        /* Секция ДЕСТА */
+        .desta-section {
+            background: linear-gradient(135deg, rgba(255,62,62,0.15) 0%, rgba(255,140,66,0.15) 100%);
+            border-radius: 60px;
+            padding: 100px 80px;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,62,62,0.3);
+        }
+
+        .desta-title {
+            font-size: 200px;
+            font-weight: 900;
+            text-align: center;
+            line-height: 1;
+            background: linear-gradient(135deg, #ff3e3e, #ff8c42, #ffd93d, #ff6b9d, #a463f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 25px;
+            text-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .desta-quote {
+            font-size: 54px;
+            font-weight: 800;
+            text-align: center;
+            color: #fff;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 30px rgba(255,62,62,0.6);
+            max-width: 1100px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .desta-author {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 28px;
+            color: #ff8c42;
+            font-weight: 700;
+            letter-spacing: 5px;
+        }
+
+        /* Курсы */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+        }
+
+        .course-card {
+            background: rgba(30,30,30,0.8);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            padding: 50px 40px;
+            border: 1px solid rgba(255,62,62,0.3);
+            transition: 0.5s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .course-card:hover {
+            transform: translateY(-20px);
+            border-color: #ff8c42;
+            box-shadow: 0 30px 70px rgba(255,62,62,0.4);
+        }
+
+        /* Календарь */
+        .calendar-section {
+            padding: 100px 0;
+            background: rgba(20,20,20,0.5);
+            border-radius: 60px;
+            margin: 80px 0;
+        }
+
+        .calendar-card {
+            background: rgba(30,30,30,0.8);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            padding: 50px 30px;
+            text-align: center;
+            border: 1px solid rgba(255,62,62,0.3);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        /* Модальные окна */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 99999;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(30px);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+            max-width: 650px;
+            width: 92%;
+            border-radius: 60px;
+            padding: 60px;
+            position: relative;
+            border: 2px solid rgba(255,62,62,0.6);
+            animation: zoomIn 0.5s;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 100px rgba(255,62,62,0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 42px;
+            color: white;
+            cursor: pointer;
+            transition: 0.4s;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: rgba(255,62,62,0.2);
+        }
+
+        .modal-close:hover {
+            background: #ff3e3e;
+            transform: rotate(180deg) scale(1.1);
+        }
+
+        .modal-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            color: #ff8c42;
+        }
+
+        .modal-subtitle {
+            font-size: 22px;
+            color: #ccc;
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        .modal-price {
+            font-size: 64px;
+            font-weight: 900;
+            color: #ff3e3e;
+            margin-bottom: 35px;
+            text-shadow: 0 0 30px rgba(255,62,62,0.5);
+        }
+
+        .modal-features {
+            margin-bottom: 45px;
+        }
+
+        .modal-features li {
+            list-style: none;
+            margin-bottom: 18px;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 19px;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .modal-input {
+            padding: 20px 30px;
+            border-radius: 60px;
+            border: 2px solid rgba(255,62,62,0.4);
+            background: rgba(255,255,255,0.08);
+            color: white;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .modal-input:focus {
+            border-color: #ff3e3e;
+            outline: none;
+            background: rgba(255,62,62,0.15);
+            box-shadow: 0 0 30px rgba(255,62,62,0.3);
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: linear-gradient(45deg, #ff3e3e, #ff8c42);
+            color: white;
+            padding: 20px 45px;
+            border-radius: 70px;
+            box-shadow: 0 20px 60px rgba(255,62,62,0.6);
+            transform: translateX(600px);
+            transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 999999;
+            font-weight: 700;
+            font-size: 19px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+
+        .notification.active {
+            transform: translateX(0);
+        }
+
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0a;
+            z-index: 9999999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.8s;
+        }
+
+        .loading.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .spinner {
+            width: 120px;
+            height: 120px;
+            border: 8px solid rgba(255,62,62,0.2);
+            border-top: 8px solid #ff3e3e;
+            border-right: 8px solid #ff8c42;
+            border-bottom: 8px solid #ffd93d;
+            border-left: 8px solid transparent;
+            border-radius: 50%;
+            animation: rotate3D 1.2s linear infinite;
+            box-shadow: 0 0 60px rgba(255,62,62,0.4);
+        }
+
+        /* Адаптация */
+        @media (max-width: 1200px) {
+            .hero-title { font-size: 64px; }
+            .desta-title { font-size: 140px; letter-spacing: 15px; }
+            .desta-photo, .photo-frame, .photo-frame2 { width: 450px; height: 450px; }
+            .gallery-section { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 992px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-image { order: -1; }
+            .hero-quote { border-left: none; padding-left: 0; }
+            .btn-group { justify-content: center; }
+            .nav-links { display: none; }
+            .nav-links.active { 
+                display: flex; 
+                flex-direction: column; 
+                position: absolute; 
+                top: 100%; 
+                left: 0; 
+                width: 100%; 
+                background: rgba(0,0,0,0.98); 
+                padding: 40px; 
+                backdrop-filter: blur(20px); 
+                border-bottom: 3px solid #ff3e3e; 
+            }
+            .menu-toggle { display: block; }
+            .desta-title { font-size: 100px; }
+            .desta-quote { font-size: 42px; }
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 52px; }
+            .desta-photo, .photo-frame, .photo-frame2 { width: 350px; height: 350px; }
+            .hero-badge { width: 120px; height: 120px; font-size: 36px; }
+            .desta-title { font-size: 70px; letter-spacing: 10px; }
+            .desta-quote { font-size: 32px; }
+            .section { padding: 80px 0; }
+            .gallery-section { grid-template-columns: 1fr; }
+            .btn-group { flex-direction: column; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 42px; }
+            .desta-photo, .photo-frame, .photo-frame2 { width: 280px; height: 280px; }
+            .hero-badge { width: 100px; height: 100px; font-size: 30px; }
+            .desta-title { font-size: 50px; }
+            .desta-quote { font-size: 26px; }
+            .btn { padding: 16px 35px; font-size: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <!-- ХЕДЕР (ОБЪЕДИНЁННЫЙ) -->
+    <header id="header">
+        <div class="logo">СЕР<span>ГЕЙ</span></div>
+        <div class="nav-links" id="navLinks">
+            <a href="#hero-massage">💆 МАССАЖ</a>
+            <a href="#hero-birthday">🎂 ПОЗДРАВЛЕНИЯ</a>
+            <a href="#hero-desta">🔥 ДЕСТА</a>
+            <a href="#girls">👸 ДЕВУШКИ</a>
+            <a href="#courses">📚 КУРСЫ</a>
+            <a href="#calendar">📅 ЗАПИСЬ</a>
+            <a href="#gallery">📸 ГАЛЕРЕЯ</a>
+            <a href="#profile" onclick="openProfile(event)">🔑 КАБИНЕТ</a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- ЗАГРУЗКА -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- УВЕДОМЛЕНИЕ -->
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle" style="font-size: 28px;"></i>
+        <span id="notificationText">Успешно!</span>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ========== СЕКЦИЯ 1: МАССАЖ (ИЗ ПЕРВОГО ФАЙЛА) ========== -->
+    <!-- ====================================================== -->
+
+    <section id="hero-massage" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">⚡ АКАДЕМИЯ МАССАЖА ⚡</div>
+                    <h1 class="hero-title">МАС<span class="gradient-text">САЖ</span></h1>
+                    <div class="hero-quote">
+                        "Расслабление на высшем уровне. Только для тебя."
+                    </div>
+                    <p class="hero-description">
+                        Эксклюзивные техники массажа от лучших мастеров. 7 лет практики.
+                        Сними напряжение, почувствуй лёгкость.
+                    </p>
+                    <div class="btn-group">
+                        <button class="btn" onclick="openMassageModal('vip')">VIP МАССАЖ</button>
+                        <button class="btn btn-outline" onclick="openMassageModal('classic')">КЛАССИКА</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://cdn.globalsportsystems.org/portraits/2021/2009/md/62704b8ba34bb.webp" alt="Массаж" class="desta-photo">
+                    <div class="photo-frame"></div>
+                    <div class="photo-frame2"></div>
+                    <div class="hero-badge">
+                        <span>💆<br>МАССАЖ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- ========== СЕКЦИЯ 2: ПОЗДРАВЛЕНИЯ СЕРГЕЮ (ИЗ ВТОРОГО ФАЙЛА) ========== -->
+    <!-- ====================================================== -->
+
+    <section id="hero-birthday" class="hero" style="min-height: 100vh;">
+        <div class="container">
+            <div class="hero fade-in">
+                <div class="photo-frame">
+                    <img src="https://cdn.globalsportsystems.org/portraits/2021/2009/md/62704b8ba34bb.webp" alt="Серёжа">
+                </div>
+                <h1>Серёжа, с днём рождения!</h1>
+                <div class="subtitle">Три признания в любви</div>
+            </div>
+
+            <!-- Сетка поздравлений -->
+            <div class="grid">
+                <!-- Саша -->
+                <div class="girl-card card-sasha fade-in" style="animation-delay: 0.2s;">
+                    <div class="girl-emoji">💋🔥</div>
+                    <div class="girl-name name-sasha">Саша Пташинская</div>
+                    <div class="message-box" id="sashaMessage">
+                        <div class="message-content" id="sashaText">❤️ Нажми на меня ❤️</div>
+                    </div>
+                    <div class="click-hint">
+                        <span class="heart-icon">💕</span> тыкай сюда для нового <span class="heart-icon">💕</span>
+                    </div>
+                    <button class="more-btn" onclick="showNewMessage('sasha')">Ещё, Серёж?</button>
+                </div>
+
+                <!-- Лида -->
+                <div class="girl-card card-lida fade-in" style="animation-delay: 0.4s;">
+                    <div class="girl-emoji">🌸✨</div>
+                    <div class="girl-name name-lida">Лида Маркарян</div>
+                    <div class="message-box" id="lidaMessage">
+                        <div class="message-content" id="lidaText">🌹 Кликни меня нежно 🌹</div>
+                    </div>
+                    <div class="click-hint">
+                        <span class="heart-icon">💖</span> нажми, будет жарко <span class="heart-icon">💖</span>
+                    </div>
+                    <button class="more-btn" onclick="showNewMessage('lida')">Хочу ещё, Лида</button>
+                </div>
+
+                <!-- Анечка -->
+                <div class="girl-card card-anechka fade-in" style="animation-delay: 0.6s;">
+                    <div class="girl-emoji">🍑💦</div>
+                    <div class="girl-name name-anechka">Анечка</div>
+                    <div class="message-box" id="anechkaMessage">
+                        <div class="message-content" id="anechkaText">🥵 Нажми на меня, Серёжа 🥵</div>
+                    </div>
+                    <div class="click-hint">
+                        <span class="heart-icon">💋</span> жми, не пожалеешь <span class="heart-icon">💋</span>
+                    </div>
+                    <button class="more-btn" onclick="showNewMessage('anechka')">Ещё, Анечка!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- ========== СЕКЦИЯ 3: ДЕСТА (ИЗ ТРЕТЬЕГО ФАЙЛА) ========== -->
+    <!-- ====================================================== -->
+
+    <section id="hero-desta" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">⚡ АКАДЕМИЯ ДЕСТА ⚡</div>
+                    <h1 class="hero-title">ДЕ<span class="gradient-text">СТА</span></h1>
+                    <div class="hero-quote">
+                        "Быть собой — это твоя суперсила. Начни путь к себе."
+                    </div>
+                    <p class="hero-description">
+                        50,000+ учеников уже изменили свою жизнь. 7 лет трансформаций.
+                        Система, которая работает. Без воды, без иллюзий, без оправданий.
+                        Только практика. Только результат.
+                    </p>
+                    <div class="btn-group">
+                        <button class="btn" onclick="openCourseModal('starter')">НАЧАТЬ</button>
+                        <button class="btn btn-outline" onclick="openCalendar()">ЗАПИСАТЬСЯ</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://media.tenor.com/06Ebb5ksk2AAAAAe/markaryan-%D0%B0%D1%80%D1%81%D0%B5%D0%BD.png" alt="ДЕСТА" class="desta-photo" onerror="this.src='https://via.placeholder.com/550x550/ff3e3e/fff?text=ДЕСТА'">
+                    <div class="photo-frame"></div>
+                    <div class="photo-frame2"></div>
+                    <div class="hero-badge">
+                        <span>🔥<br>ДЕСТА</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция ДЕСТА (текст) -->
+    <div class="container">
+        <div class="desta-section">
+            <div class="desta-bg"></div>
+            <h1 class="desta-title">ДЕСТА</h1>
+            <div class="desta-quote">
+                "Твоя уверенность — это твой магнит. Разреши себе быть настоящим."
+            </div>
+            <div class="desta-author">
+                — ОСНОВАТЕЛЬ АКАДЕМИИ
+            </div>
+        </div>
+    </div>
+
+    <!-- Галерея -->
+    <div class="container" id="gallery">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 class="section-title" style="font-size: 64px;">📸 ГАЛЕРЕЯ <span class="gradient-text">ВСЕЛЕННОЙ</span></h2>
+            <p class="section-subtitle" style="font-size: 24px; color: #ccc;">Фото с мероприятий, встреч, трансформаций</p>
+        </div>
+        <div class="gallery-section">
+            <img src="https://media.tenor.com/06Ebb5ksk2AAAAAe/markaryan-%D0%B0%D1%80%D1%81%D0%B5%D0%BD.png" class="gallery-img" onclick="openGalleryModal(this.src)" onerror="this.src='https://via.placeholder.com/500x300/ff3e3e/fff?text=ДЕСТА'">
+            <img src="https://i.pinimg.com/originals/3a/a4/34/3aa434a65d3276af341a94e425df6922.jpg" class="gallery-img" onclick="openGalleryModal(this.src)" onerror="this.src='https://via.placeholder.com/500x300/ff8c42/fff?text=ДЕСТА'">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBJ5YW7BHTyLyveMjblQXzevLoHDl741Yrgg&s" class="gallery-img" onclick="openGalleryModal(this.src)" onerror="this.src='https://via.placeholder.com/500x300/ffd93d/fff?text=ДЕСТА'">
+        </div>
+    </div>
+
+    <!-- Курсы -->
+    <section id="courses" class="section">
+        <div class="container">
+            <div class="courses-header" style="text-align: center; margin-bottom: 80px;">
+                <h2 class="section-title" style="font-size: 64px;">🔥 КУРСЫ <span class="gradient-text">ДЕСТА</span></h2>
+                <p class="section-subtitle" style="font-size: 24px; color: #ccc;">Выбери свою трансформацию</p>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Курс 1 -->
+                <div class="course-card" onclick="openCourseModal('starter')">
+                    <div style="position: absolute; top: 30px; right: 30px; background: linear-gradient(45deg, #ff3e3e, #ff8c42); padding: 12px 25px; border-radius: 50px;">🔥 НОВИНКА</div>
+                    <div style="font-size: 70px; color: #ff3e3e;"><i class="fas fa-rocket"></i></div>
+                    <h3 style="font-size: 36px; font-weight: 900;">СТАРТЕР</h3>
+                    <div style="font-size: 52px; color: #ff8c42;">9,900₽</div>
+                    <ul style="list-style: none; margin: 35px 0;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #ff3e3e;"></i> 10 видео-уроков</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #ff3e3e;"></i> Рабочая тетрадь</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #ff3e3e;"></i> Чат поддержки</li>
+                    </ul>
+                    <button class="btn btn-full">ВЫБРАТЬ</button>
+                </div>
+
+                <!-- Курс 2 -->
+                <div class="course-card" style="border: 2px solid #ff8c42;" onclick="openCourseModal('magnet')">
+                    <div style="position: absolute; top: 30px; right: 30px; background: linear-gradient(45deg, #ff8c42, #ff3e3e); padding: 12px 25px; border-radius: 50px;">⭐ ХИТ</div>
+                    <div style="font-size: 70px; color: #ff8c42;"><i class="fas fa-magnet"></i></div>
+                    <h3 style="font-size: 36px; font-weight: 900;">МАГНИТ</h3>
+                    <div style="font-size: 52px; color: #ff8c42;">19,900₽</div>
+                    <ul style="list-style: none; margin: 35px 0;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #ff8c42;"></i> 20 видео-уроков</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #ff8c42;"></i> Психология влияния</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #ff8c42;"></i> 3 вебинара</li>
+                    </ul>
+                    <button class="btn btn-full">ВЫБРАТЬ ХИТ</button>
+                </div>
+
+                <!-- Курс 3 -->
+                <div class="course-card" onclick="openCourseModal('alpha')">
+                    <div style="position: absolute; top: 30px; right: 30px; background: linear-gradient(45deg, #ffd93d, #ff8c42); padding: 12px 25px; border-radius: 50px;">💎 VIP</div>
+                    <div style="font-size: 70px; color: #ffd93d;"><i class="fas fa-crown"></i></div>
+                    <h3 style="font-size: 36px; font-weight: 900;">АЛЬФА</h3>
+                    <div style="font-size: 52px; color: #ffd93d;">49,900₽</div>
+                    <ul style="list-style: none; margin: 35px 0;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #ffd93d;"></i> 40 видео-уроков</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #ffd93d;"></i> 5 консультаций</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: #ffd93d;"></i> НЛП-техники</li>
+                    </ul>
+                    <button class="btn btn-full">СТАТЬ VIP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Календарь -->
+    <section id="calendar" class="calendar-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <h2 class="section-title" style="font-size: 64px;">📅 ЗАПИСЬ <span class="gradient-text">НА КУРС</span></h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+                <div class="calendar-card" onclick="bookTime('15 марта, 19:00')">
+                    <div style="font-size: 70px; color: #ff8c42;">15</div>
+                    <div style="font-size: 28px;">МАРТА</div>
+                    <div style="font-size: 32px; color: #ff3e3e;">19:00 МСК</div>
+                    <div style="margin: 30px 0;"><i class="fas fa-fire" style="color: #ff3e3e;"></i> 8 мест из 20</div>
+                    <button class="btn-calendar" style="background: transparent; border: 3px solid #ff3e3e; color: white; padding: 16px 45px; border-radius: 60px;">ЗАПИСАТЬСЯ</button>
+                </div>
+
+                <div class="calendar-card" onclick="bookTime('22 марта, 20:00')">
+                    <div style="font-size: 70px; color: #ff8c42;">22</div>
+                    <div style="font-size: 28px;">МАРТА</div>
+                    <div style="font-size: 32px; color: #ff3e3e;">20:00 МСК</div>
+                    <div style="margin: 30px 0;"><i class="fas fa-fire" style="color: #ff3e3e;"></i> 5 мест из 20</div>
+                    <button class="btn-calendar" style="background: #ff3e3e; border: none; color: white; padding: 16px 45px; border-radius: 60px;">ЗАПИСАТЬСЯ</button>
+                </div>
+
+                <div class="calendar-card" onclick="bookTime('29 марта, 18:00')">
+                    <div style="font-size: 70px; color: #ff8c42;">29</div>
+                    <div style="font-size: 28px;">МАРТА</div>
+                    <div style="font-size: 32px; color: #ff3e3e;">18:00 МСК</div>
+                    <div style="margin: 30px 0;"><i class="fas fa-fire" style="color: #ff3e3e;"></i> 12 мест из 20</div>
+                    <button class="btn-calendar" style="background: transparent; border: 3px solid #ff3e3e; color: white; padding: 16px 45px; border-radius: 60px;">ЗАПИСАТЬСЯ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- ========== МОДАЛЬНЫЕ ОКНА ========== -->
+    <!-- ====================================================== -->
+
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeModal('courseModal')">×</div>
+            <div id="courseModalContent"></div>
+        </div>
+    </div>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeModal('bookingModal')">×</div>
+            <h2 class="modal-title">📅 ЗАПИСЬ</h2>
+            <p class="modal-subtitle" id="bookingTimeText">15 марта, 19:00</p>
+            <div class="modal-form">
+                <input type="text" class="modal-input" id="bookingName" placeholder="Твоё имя">
+                <input type="tel" class="modal-input" id="bookingPhone" placeholder="Телефон">
+                <button class="btn" onclick="submitBooking()">ПОДТВЕРДИТЬ</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="galleryModal" class="modal">
+        <div class="modal-content" style="background: transparent; box-shadow: none; border: none; max-width: 900px;">
+            <div class="modal-close" onclick="closeModal('galleryModal')" style="background: rgba(0,0,0,0.8);">×</div>
+            <img id="galleryModalImage" src="" style="width: 100%; border-radius: 30px; border: 5px solid rgba(255,62,62,0.7);">
+        </div>
+    </div>
+
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeModal('profileModal')">×</div>
+            <h2 class="modal-title">🔑 ЛИЧНЫЙ КАБИНЕТ</h2>
+            <p class="modal-subtitle">Добро пожаловать, Серёжа!</p>
+            <div style="margin: 40px 0;">
+                <div style="margin-bottom: 20px;">📊 Прогресс: 65%</div>
+                <div style="width: 100%; height: 20px; background: #333; border-radius: 10px;">
+                    <div style="height: 100%; width: 65%; background: linear-gradient(90deg, #ff3e3e, #ff8c42); border-radius: 10px;"></div>
+                </div>
+            </div>
+            <button class="btn" onclick="closeModal('profileModal')">ЗАКРЫТЬ</button>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer style="background: #0a0a0a; padding: 100px 0 40px; border-top: 2px solid rgba(255,62,62,0.3);">
+        <div class="container" style="text-align: center;">
+            <div style="font-size: 4rem; font-weight: 900;">СЕР<span style="color: #ff3e3e;">ГЕЙ</span></div>
+            <p style="margin: 40px 0; font-size: 1.3rem;">Вселенная Сергея, ДЕСТА, массаж и три королевы</p>
+            <div style="display: flex; justify-content: center; gap: 40px; font-size: 2rem;">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-vk"></i>
+            </div>
+            <div style="margin-top: 60px; color: #aaa;">© 2026 — Мега-вселенная Сергея Пашовкина</div>
+        </div>
+    </footer>
+
+    <script>
+        // ======================================================
+        // ========== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
+        // ======================================================
+
+        let currentBookingTime = '15 марта, 19:00';
+
+        // Базы сообщений для девушек (из второго файла)
+        const messages = {
+            sasha: [
+                "Серёжа, ты такой горячий, что даже лёд тает, когда ты проходишь мимо ❄️🔥 Хочется прижаться к тебе и никуда не отпускать...",
+                "Мой большой и сильный мальчик 🤤 Когда ты рядом, у меня подкашиваются ножки...",
+                "Серёж, ты у меня в голове и под одеялком 🫣",
+                "Твой голос — музыка для моих ушек. Твои руки — лучшее место в мире.",
+                "Саша хочет тебя поздравлять не только словами, но и... 😘",
+                "Если бы ты знал, как я представляю наши ночи... 🔥",
+                "Серёж, ты — мой личный наркотик. 💋",
+                "Мальчик мой, с тобой даже просто сидеть рядом — уже счастье."
+            ],
+            lida: [
+                "Серёженька, ты как сладкий персик 🍑 — хочется откусить и наслаждаться вкусом.",
+                "Лида хочет, чтобы ты знал: ты самый желанный. 🫦",
+                "Серёжа, когда ты улыбаешься, у меня внутри бабочки, а внизу живота — мотыльки 🦋",
+                "Мой тёплый, мой родной. Сегодня ночью буду думать о тебе.",
+                "Лида — это не просто имя, это твоя девочка. 😘",
+                "Серёж, ты такой вкусный, что хочется съесть тебя целиком.",
+                "Когда ты рядом, я забываю обо всём. Хочется только прижиматься.",
+                "Мой большой мальчик, с тобой я чувствую себя маленькой и беззащитной... 🥺"
+            ],
+            anechka: [
+                "Серёжа, ты — мой личный олимпийский огонь 🔥 Зажигаешь меня с полоборота.",
+                "Анечка хочет, чтобы ты знал: ты самый лучший. Самый красивый. Самый... большой? 😈",
+                "Серёж, я хочу быть твоей маленькой шалуньей. 🍭",
+                "Твоё тело — произведение искусства. Хочется рассматривать его часами.",
+                "Мой сладкий, с днём рождения! Жаль, что мы не одни сейчас.",
+                "Серёж, ты умеешь делать девочек счастливыми.",
+                "Твой запах сводит с ума. Твой голос — мурашки по коже. 🥵",
+                "Анечка хочет, чтобы ты сегодня получил самый лучший подарок — я. 😉"
+            ]
+        };
+
+        let currentIndex = { sasha: 0, lida: 0, anechka: 0 };
+
+        // ======================================================
+        // ========== ИНИЦИАЛИЗАЦИЯ ==========
+        // ======================================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('loading').classList.add('fade-out');
+            }, 1200);
+
+            createParticles(200);
+
+            // Первые сообщения для девушек
+            document.getElementById('sashaText').innerHTML = messages.sasha[0];
+            document.getElementById('lidaText').innerHTML = messages.lida[0];
+            document.getElementById('anechkaText').innerHTML = messages.anechka[0];
+
+            showNotification('🌟 Вселенная Сергея активирована 🌟');
+        });
+
+        // ======================================================
+        // ========== ЧАСТИЦЫ ==========
+        // ======================================================
+
+        function createParticles(count) {
+            const container = document.getElementById('particles-js');
+            for (let i = 0; i < count; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.top = Math.random() * 100 + '%';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDelay = Math.random() * 15 + 's';
+                p.style.width = Math.random() * 8 + 2 + 'px';
+                p.style.height = p.style.width;
+                container.appendChild(p);
+            }
+        }
+
+        // ======================================================
+        // ========== УВЕДОМЛЕНИЯ ==========
+        // ======================================================
+
+        function showNotification(message) {
+            const notif = document.getElementById('notification');
+            document.getElementById('notificationText').textContent = message;
+            notif.classList.add('active');
+            setTimeout(() => notif.classList.remove('active'), 3000);
+        }
+
+        // ======================================================
+        // ========== МЕНЮ ==========
+        // ======================================================
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // ======================================================
+        // ========== МОДАЛЬНЫЕ ОКНА ==========
+        // ======================================================
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // ======================================================
+        // ========== ФУНКЦИИ ДЛЯ ДЕВУШЕК ==========
+        // ======================================================
+
+        function showNewMessage(girl) {
+            const arr = messages[girl];
+            currentIndex[girl] = (currentIndex[girl] + 1) % arr.length;
+            const msg = arr[currentIndex[girl]];
+            const el = document.getElementById(girl + 'Text');
+            const box = document.getElementById(girl + 'Message');
+
+            box.style.opacity = '0.5';
+            box.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                el.innerHTML = msg;
+                box.style.opacity = '1';
+                box.style.transform = 'scale(1)';
+            }, 200);
+
+            showNotification(`💬 ${girl} сказала: ${msg.substring(0, 30)}...`);
+        }
+
+        // Добавляем клик по сообщениям
+        document.getElementById('sashaMessage')?.addEventListener('click', () => showNewMessage('sasha'));
+        document.getElementById('lidaMessage')?.addEventListener('click', () => showNewMessage('lida'));
+        document.getElementById('anechkaMessage')?.addEventListener('click', () => showNewMessage('anechka'));
+
+        // ======================================================
+        // ========== КУРСЫ ==========
+        // ======================================================
+
+        function openCourseModal(type) {
+            let content = '';
+            if (type === 'starter') {
+                content = `<h2 class="modal-title">🔥 СТАРТЕР</h2>
+                    <p class="modal-subtitle">Стартовый курс для новичков. 10 уроков.</p>
+                    <div class="modal-price">9,900₽</div>
+                    <ul class="modal-features">
+                        <li><i class="fas fa-check-circle"></i> 10 видео-уроков</li>
+                        <li><i class="fas fa-check-circle"></i> Рабочая тетрадь</li>
+                        <li><i class="fas fa-check-circle"></i> Чат поддержки</li>
+                        <li><i class="fas fa-check-circle"></i> Доступ навсегда</li>
+                    </ul>
+                    <div class="modal-form">
+                        <input type="text" class="modal-input" placeholder="Ваше имя">
+                        <input type="tel" class="modal-input" placeholder="Телефон">
+                        <button class="btn" onclick="buyCourse('Стартер')">КУПИТЬ КУРС</button>
+                    </div>`;
+            } else if (type === 'magnet') {
+                content = `<h2 class="modal-title">🧲 МАГНИТ</h2>
+                    <p class="modal-subtitle">Хит продаж. Психология влияния.</p>
+                    <div class="modal-price">19,900₽</div>
+                    <ul class="modal-features">
+                        <li><i class="fas fa-check-circle"></i> 20 видео-уроков</li>
+                        <li><i class="fas fa-check-circle"></i> Психология влияния</li>
+                        <li><i class="fas fa-check-circle"></i> 3 вебинара</li>
+                        <li><i class="fas fa-check-circle"></i> Разбор ситуаций</li>
+                    </ul>
+                    <div class="modal-form">
+                        <input type="text" class="modal-input" placeholder="Ваше имя">
+                        <input type="tel" class="modal-input" placeholder="Телефон">
+                        <button class="btn" onclick="buyCourse('Магнит')">КУПИТЬ КУРС</button>
+                    </div>`;
+            } else if (type === 'alpha') {
+                content = `<h2 class="modal-title">👑 АЛЬФА</h2>
+                    <p class="modal-subtitle">VIP-программа. Полная трансформация.</p>
+                    <div class="modal-price">49,900₽</div>
+                    <ul class="modal-features">
+                        <li><i class="fas fa-check-circle"></i> 40 видео-уроков</li>
+                        <li><i class="fas fa-check-circle"></i> 5 консультаций</li>
+                        <li><i class="fas fa-check-circle"></i> НЛП-техники</li>
+                        <li><i class="fas fa-check-circle"></i> Встреча с ДЕСТА</li>
+                    </ul>
+                    <div class="modal-form">
+                        <input type="text" class="modal-input" placeholder="Ваше имя">
+                        <input type="tel" class="modal-input" placeholder="Телефон">
+                        <button class="btn" onclick="buyCourse('Альфа')">КУПИТЬ КУРС</button>
+                    </div>`;
+            }
+            document.getElementById('courseModalContent').innerHTML = content;
+            openModal('courseModal');
+        }
+
+        function buyCourse(name) {
+            showNotification(`Курс "${name}" добавлен в корзину!`);
+            closeModal('courseModal');
+        }
+
+        // ======================================================
+        // ========== МАССАЖ ==========
+        // ======================================================
+
+        function openMassageModal(type) {
+            let content = '';
+            if (type === 'vip') {
+                content = `<h2 class="modal-title">💆 VIP МАССАЖ</h2>
+                    <p class="modal-subtitle">Эксклюзивный сеанс для тебя</p>
+                    <div class="modal-price">9,900₽</div>
+                    <ul class="modal-features">
+                        <li><i class="fas fa-check-circle"></i> 90 минут</li>
+                        <li><i class="fas fa-check-circle"></i> Ароматерапия</li>
+                        <li><i class="fas fa-check-circle"></i> Гидромассажная ванна</li>
+                    </ul>
+                    <div class="modal-form">
+                        <input type="text" class="modal-input" placeholder="Ваше имя">
+                        <input type="tel" class="modal-input" placeholder="Телефон">
+                        <button class="btn" onclick="bookMassage()">ЗАПИСАТЬСЯ</button>
+                    </div>`;
+            } else {
+                content = `<h2 class="modal-title">💆 КЛАССИЧЕСКИЙ МАССАЖ</h2>
+                    <p class="modal-subtitle">Расслабление и восстановление</p>
+                    <div class="modal-price">4,900₽</div>
+                    <ul class="modal-features">
+                        <li><i class="fas fa-check-circle"></i> 60 минут</li>
+                        <li><i class="fas fa-check-circle"></i> Классические техники</li>
+                        <li><i class="fas fa-check-circle"></i> Чай</li>
+                    </ul>
+                    <div class="modal-form">
+                        <input type="text" class="modal-input" placeholder="Ваше имя">
+                        <input type="tel" class="modal-input" placeholder="Телефон">
+                        <button class="btn" onclick="bookMassage()">ЗАПИСАТЬСЯ</button>
+                    </div>`;
+            }
+            document.getElementById('courseModalContent').innerHTML = content;
+            openModal('courseModal');
+        }
+
+        function bookMassage() {
+            showNotification('Запись на массаж подтверждена!');
+            closeModal('courseModal');
+        }
+
+        // ======================================================
+        // ========== КАЛЕНДАРЬ ==========
+        // ======================================================
+
+        function openCalendar() {
+            document.getElementById('calendar').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function bookTime(time) {
+            currentBookingTime = time;
+            document.getElementById('bookingTimeText').textContent = time;
+            openModal('bookingModal');
+        }
+
+        function submitBooking() {
+            const name = document.getElementById('bookingName')?.value;
+            if (!name) {
+                showNotification('Введите имя!');
+                return;
+            }
+            showNotification('Запись подтверждена на ' + currentBookingTime);
+            closeModal('bookingModal');
+        }
+
+        // ======================================================
+        // ========== ГАЛЕРЕЯ ==========
+        // ======================================================
+
+        function openGalleryModal(src) {
+            document.getElementById('galleryModalImage').src = src;
+            openModal('galleryModal');
+        }
+
+        // ======================================================
+        // ========== ЛИЧНЫЙ КАБИНЕТ ==========
+        // ======================================================
+
+        function openProfile(e) {
+            if (e) e.preventDefault();
+            openModal('profileModal');
+        }
+
+        // ======================================================
+        // ========== ЗАКРЫТИЕ ПО КЛИКУ ВНЕ МОДАЛКИ ==========
+        // ======================================================
+
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal')) {
+                e.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        console.log('МЕГА-САЙТ ЗАГРУЖЕН: Вселенная Сергея, ДЕСТА, массаж и девушки');
+    </script>
+</body>
+</html>
